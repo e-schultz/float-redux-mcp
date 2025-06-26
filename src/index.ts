@@ -10,11 +10,11 @@ import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprot
 import { Ollama } from 'ollama';
 import pino from 'pino';
 
-// Initialize Pino logger with explicit stderr destination
+// Initialize Pino logger with file output
 const logger = pino({
   name: 'float-redux-mcp',
   level: 'debug'
-}, process.stderr);
+}, pino.destination('/Users/evan/projects/float-workspace/tools/float-redux-mcp/float-redux-mcp.jsonl'));
 
 // Float Redux State Schema
 interface FloatState {
@@ -238,10 +238,10 @@ const floatMCPMiddleware: Middleware = store => next => async (action: any) => {
       const result = await mcpClients['chroma'].callTool({
         name: 'chroma_query_documents',
         arguments: {
-          collection_name: 'float_dispatch_bay',
+          collection_name: 'float_continuity_anchors',
           query_texts: [`bridge ${action.payload.bridge_id}`, action.payload.bridge_id],
           where: {
-            'metadata.bridge_id': action.payload.bridge_id
+            bridge_id: action.payload.bridge_id
           },
           n_results: 10
         }
