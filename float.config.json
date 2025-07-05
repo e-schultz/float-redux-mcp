@@ -1,0 +1,6 @@
+{
+  "projectName": "float-redux-mcp",
+  "subdomain": "redux-mcp",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}

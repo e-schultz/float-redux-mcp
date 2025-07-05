@@ -1,4 +1,11 @@
-# CHANGELOG
+# Changelog
+
+## 2025-07-04 - Connected to the Forest 🌲
+
+- Connected to GitHub repository: `https://github.com/e-schultz/float-redux-mcp`
+- Joined the FLOAT Forest Navigator ecosystem
+- Added automatic toolbar injection for forest navigation
+- Enabled auto-deployment on git push via Vercel
 
 All notable changes to the Float Redux MCP project will be documented in this file.
 
